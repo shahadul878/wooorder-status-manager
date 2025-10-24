@@ -1,0 +1,350 @@
+/**
+ * Admin Styles for WooOrder Status Manager
+ */
+
+.woosm-admin-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.woosm-admin-main {
+    flex: 1;
+}
+
+.woosm-admin-sidebar {
+    width: 400px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.woosm-status-list h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.woosm-color-preview {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+.woosm-no-icon {
+    color: #999;
+    font-style: italic;
+}
+
+.woosm-status-form h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.woosm-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.woosm-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.woosm-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.woosm-modal-header h3 {
+    margin: 0;
+}
+
+.woosm-modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+}
+
+.woosm-modal-close:hover {
+    color: #000;
+}
+
+.woosm-modal-body {
+    padding: 20px;
+}
+
+.woosm-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.woosm-workflow-rules {
+    margin-top: 20px;
+}
+
+.woosm-workflow-rule {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.woosm-workflow-rule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.woosm-workflow-rule-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.woosm-workflow-rule-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.woosm-workflow-rule-details {
+    color: #666;
+    font-size: 13px;
+}
+
+.woosm-timeline {
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.woosm-timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.woosm-timeline-item:before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.woosm-timeline-item.active:before {
+    background-color: #0073aa;
+}
+
+.woosm-timeline-content {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.woosm-timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.woosm-timeline-status {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.woosm-timeline-date {
+    color: #666;
+    font-size: 12px;
+}
+
+.woosm-timeline-note {
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.woosm-dashboard-widget {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.woosm-dashboard-widget h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.woosm-status-count {
+    display: inline-block;
+    background: #f0f0f1;
+    color: #2c3338;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.woosm-status-count.has-orders {
+    background: #0073aa;
+    color: white;
+    cursor: pointer;
+}
+
+.woosm-status-count.has-orders:hover {
+    background: #005a87;
+}
+
+.woosm-bulk-actions {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.woosm-bulk-actions h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.woosm-bulk-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.woosm-order-select {
+    min-width: 200px;
+}
+
+.woosm-notice {
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid;
+    background: #fff;
+}
+
+.woosm-notice.success {
+    border-left-color: #46b450;
+    background: #ecf7ed;
+}
+
+.woosm-notice.error {
+    border-left-color: #dc3232;
+    background: #fbeaea;
+}
+
+.woosm-notice.warning {
+    border-left-color: #ffb900;
+    background: #fff8e5;
+}
+
+.woosm-notice.info {
+    border-left-color: #00a0d2;
+    background: #e5f5fa;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .woosm-admin-container {
+        flex-direction: column;
+    }
+    
+    .woosm-admin-sidebar {
+        width: 100%;
+    }
+    
+    .woosm-modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .woosm-bulk-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .woosm-order-select {
+        min-width: auto;
+    }
+}
+
+/* Color Picker Enhancement */
+.color-picker {
+    width: 60px !important;
+    height: 30px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 3px !important;
+    cursor: pointer;
+}
+
+/* Icon Preview */
+.woosm-icon-preview {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Loading States */
+.woosm-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.woosm-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: woosm-spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes woosm-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

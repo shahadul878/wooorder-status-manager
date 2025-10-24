@@ -1,0 +1,430 @@
+/**
+ * Frontend Styles for WooOrder Status Manager
+ */
+
+.woosm-tracking-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.woosm-tracking-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.woosm-tracking-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.woosm-order-info {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.woosm-order-info h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.woosm-order-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.woosm-order-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.woosm-order-detail-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.woosm-order-detail-value {
+    color: #333;
+    font-size: 14px;
+}
+
+.woosm-current-status {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.woosm-status-badge {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.woosm-status-badge i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.woosm-timeline {
+    margin-top: 30px;
+}
+
+.woosm-timeline h4 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.woosm-timeline-list {
+    position: relative;
+    padding-left: 30px;
+}
+
+.woosm-timeline-list:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #0073aa, #e0e0e0);
+}
+
+.woosm-timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.woosm-timeline-item:before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #e0e0e0;
+}
+
+.woosm-timeline-item.completed:before {
+    background: #46b450;
+    box-shadow: 0 0 0 2px #46b450;
+}
+
+.woosm-timeline-item.current:before {
+    background: #0073aa;
+    box-shadow: 0 0 0 2px #0073aa;
+    animation: woosm-pulse 2s infinite;
+}
+
+.woosm-timeline-content {
+    padding: 20px;
+}
+
+.woosm-timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.woosm-timeline-status {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.woosm-timeline-status i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.woosm-timeline-date {
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.woosm-timeline-note {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.woosm-order-tracking {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.woosm-order-tracking h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.woosm-order-tracking-shortcode {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.woosm-search-form {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.woosm-search-form h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.woosm-search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.woosm-search-input:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+.woosm-search-button {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.woosm-search-button:hover {
+    background: #005a87;
+}
+
+.woosm-search-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.woosm-error-message {
+    background: #fbeaea;
+    color: #d63638;
+    border: 1px solid #f0b7b8;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.woosm-success-message {
+    background: #ecf7ed;
+    color: #00a32a;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.woosm-loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.woosm-spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0073aa;
+    border-radius: 50%;
+    animation: woosm-spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes woosm-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes woosm-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 115, 170, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 115, 170, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 115, 170, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .woosm-tracking-page {
+        padding: 10px;
+    }
+    
+    .woosm-tracking-container {
+        padding: 20px;
+    }
+    
+    .woosm-tracking-container h1 {
+        font-size: 24px;
+    }
+    
+    .woosm-order-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .woosm-timeline-list {
+        padding-left: 20px;
+    }
+    
+    .woosm-timeline-item:before {
+        left: -27px;
+    }
+    
+    .woosm-timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .woosm-timeline-date {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .woosm-status-badge {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .woosm-timeline-content {
+        padding: 15px;
+    }
+    
+    .woosm-search-input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .woosm-search-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .woosm-tracking-container {
+        background: #1e1e1e;
+        color: #fff;
+    }
+    
+    .woosm-tracking-container h1 {
+        color: #fff;
+    }
+    
+    .woosm-order-info {
+        background: #2d2d2d;
+    }
+    
+    .woosm-order-info h3 {
+        color: #fff;
+    }
+    
+    .woosm-order-detail-label {
+        color: #ccc;
+    }
+    
+    .woosm-order-detail-value {
+        color: #fff;
+    }
+    
+    .woosm-timeline h4 {
+        color: #fff;
+    }
+    
+    .woosm-timeline-item {
+        background: #2d2d2d;
+    }
+    
+    .woosm-timeline-status {
+        color: #fff;
+    }
+    
+    .woosm-timeline-note {
+        color: #ccc;
+        border-top-color: #404040;
+    }
+    
+    .woosm-search-form {
+        background: #2d2d2d;
+    }
+    
+    .woosm-search-form h3 {
+        color: #fff;
+    }
+    
+    .woosm-search-input {
+        background: #1e1e1e;
+        border-color: #404040;
+        color: #fff;
+    }
+    
+    .woosm-search-input:focus {
+        border-color: #0073aa;
+    }
+}
