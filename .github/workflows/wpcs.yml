@@ -1,6 +1,6 @@
 name: WPCS check
 
-on: commit
+on: push
 
 jobs:
   phpcs:
